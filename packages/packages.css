@@ -1,11 +1,12 @@
 main {
-  padding-top: 32px;
+  padding-top: 2rem;
 }
 
 .background {
-  background: url("../images/plans-background.jpg");
-  width: 100%;
-  height: 100%;
+  background: url("../images/plans-background.jpg") center/cover;
+  filter: grayscale(40%);
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   z-index: -1;
 }
@@ -14,9 +15,13 @@ main {
   border: 4px solid #0e4f1f;
   border-left: none;
   width: 80%;
-  margin: 16px 0;
+  margin: 1rem 0;
   position: relative;
   z-index: 0;
+}
+
+.package:first-of-type {
+  margin-top: 2rem;
 }
 
 .package:hover,
@@ -29,7 +34,7 @@ main {
   text-decoration: none;
   color: inherit;
   display: block;
-  padding: 32px;
+  padding: 2rem;
 }
 
 .clearfix {
@@ -71,10 +76,10 @@ main {
   top: 0;
   right: 0;
   z-index: 10;
-  margin: 20px;
-  padding: 8px;
+  margin: 1.2rem;
+  padding: 0.5rem;
   color: white !important;
-  font-size: 12px;
+  font-size: 0.75rem;
   background-color: #ff5454;
 }
 
@@ -88,7 +93,7 @@ main {
 .package-info {
   background-color: white;
   border: 1px solid #0e4f1f;
-  padding: 16px;
-  font-size: 20px;
+  padding: 1rem;
+  font-size: 1.2rem;
   color: #0e4f1f;
 }
