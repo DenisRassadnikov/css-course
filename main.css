@@ -12,16 +12,10 @@ body {
   background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
     url("./images/freedom.jpg");
   background-size: cover;
-  background-position: left bottom 65%;
+  background-position: left bottom 59%;
   position: relative;
   width: 100vw;
-  height: 70vh;
-  margin-top: 2.25rem;
-}
-
-.section-title {
-  color: #2ddf5c;
-  text-align: center;
+  height: 40vh;
 }
 
 #product-overview h1 {
@@ -30,22 +24,67 @@ body {
   left: 3%;
   color: white;
   font-family: "Anton", sans-serif;
+  font-size: 1.6rem;
 }
 
-.plan__list {
-  width: 80%;
-  margin: auto;
+@media (min-width: 40rem) and (min-height: 40rem) {
+  #product-overview {
+    height: 70vh;
+  }
+
+  #product-overview h1 {
+    font-size: 2rem;
+  }
+}
+
+/* It is important to keep the order of media queryes: 40rem and only then 60rem!!! */
+
+@media (min-width: 60rem) {
+  #product-overview {
+    height: 80vh;
+  }
+
+  #product-overview h1 {
+    font-size: 3rem;
+  }
+}
+
+.section-title {
+  color: #2ddf5c;
   text-align: center;
 }
+
+/* .plan__list {
+  width: 100%;
+  text-align: center;
+} */
 
 .plan {
   background: #d5ffdc;
   text-align: center;
   padding: 1rem;
-  margin: 0.5rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+@media (min-width: 40rem) and (orientation: landscape) {
+  .plan__list {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .plan {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    min-width: 13rem;
+    max-width: 25rem;
+  }
+
+  .plan--highlited {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .plan__features {
@@ -113,10 +152,16 @@ body {
   text-align: center;
 }
 
-.key-feature {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+/* .key-feature {
+} */
+
+@media (min-width: 40rem) {
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    max-width: 25rem;
+    vertical-align: top;
+  }
 }
 
 .key-feature__image {
@@ -147,72 +192,5 @@ body {
 .plan--highlited {
   background-color: #19b84c;
   color: white;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); */
 }
-
-.main-nav__items {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.main-nav__item {
-  display: inline-block;
-  margin: 0 1rem;
-}
-
-.main-nav__item a {
-  color: #0e4f1f;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.2rem 0;
-}
-
-.main-nav__item a:hover,
-.main-nav__item a:active {
-  color: white;
-  border-bottom: 5px solid white;
-}
-
-.main-nav__item--cta a {
-  color: white;
-  background: #ff1b68;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-}
-
-.main-nav__item--cta a:hover,
-.main-nav__item--cta a:active {
-  color: #ff1b68;
-  background: white;
-  border: none;
-}
-
-.main-footer {
-  background-color: black;
-  padding: 2rem;
-  margin-top: 3rem;
-}
-
-.main-footer__links {
-  list-style: 0;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.main-footer__link {
-  display: inline-block;
-  margin: 0 1rem;
-}
-
-.main-footer__link a {
-  color: white;
-  text-decoration: none;
-}
-
-.main-footer__link a:hover,
-.main-footer__link a:active {
-  color: #ccc;
-}
-
